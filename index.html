@@ -2,9 +2,9 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width/15, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Santuario del Código y la Palabra | Juan Arbelo</title>
-    <link rel="icon" type="image/png" href="Icono.png">
+    <link rel="icon" type="image/png" href="icono.png">
     <style>
         /* CSS: El diseño visual de la Matrix */
         :root {
@@ -12,42 +12,52 @@
             --accent-gold: #d4af37;
             --accent-purple: #4c1130;
             --glow: 0 0 10px #d4af37, 0 0 20px #4c1130;
-            --bg-overlay: rgba(5, 5, 5, 0.85); /* Capa oscura para legibilidad */
+            --bg-overlay: rgba(5, 5, 5, 0.88); /* Capa oscura más opaca para legibilidad */
         }
-        body {
+        
+        /* RESET BÁSICO PARA EVITAR FALLOS DE MARGENES */
+        html, body {
             margin: 0;
             padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
             color: var(--text-main);
             font-family: 'Courier New', Courier, monospace;
             line-height: 1.6;
             
-            /* FONDO DE PANTALLA SINCRONIZADO */
-            background-image: url("Fondo.png"/
-            background-size: cover; /* Cubre toda la pantalla */
-            background-position: center; /* Centrado */
-            background-attachment: fixed; /* Efecto Parallax (fijo al hacer scroll) */
+            /* FONDO DE PANTALLA SINCRONIZADO (Blindado) */
+            background-image: url('fondo.jpg'); /* ASEGÚRATE DE QUE EL ARCHIVO EN GITHUB SE LLAME EXACTAMENTE fondo.jpg EN MINÚSCULAS */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             background-repeat: no-repeat;
+            background-color: #000; /* Fondo negro de seguridad si falla la imagen */
         }
         
-        /* Contenedor principal con fondo oscuro para resaltar texto */
+        /* Contenedor principal con fondo oscuro (Capa de Legibilidad) */
         .main-wrapper {
             background-color: var(--bg-overlay);
             min-height: 100vh;
             width: 100%;
+            display: flex;
+            flex-direction: column;
         }
 
         header {
             text-align: center;
-            padding: 4rem 2rem;
+            padding: 4rem 2rem 2rem 2rem;
             border-bottom: 2px solid var(--accent-purple);
         }
         
-        /* LOGO DE LA APP SINCRONIZADO */
+        /* LOGO DE LA APP SINCRONIZADO (Blindado) */
         .app-logo {
-            max-width: 150px; /* Ajusta el tamaño de tu logo aquí */
+            max-width: 150px; /* Tamaño máximo del logo controlado */
             height: auto;
             margin-bottom: 1rem;
-            filter: drop-shadow(var(--glow)); /* Efecto de brillo al logo */
+            filter: drop-shadow(var(--glow)); /* Efecto de brillo */
         }
 
         h1 {
@@ -67,15 +77,16 @@
             max-width: 900px;
             margin: 0 auto;
             padding: 2rem;
+            flex: 1; /* Empuja el footer hacia abajo */
         }
         .section-box {
-            background: rgba(76, 17, 48, 0.2); /* Un poco más opaco */
+            background: rgba(76, 17, 48, 0.15); /* Caja ligeramente púrpura */
             border: 1px solid var(--accent-purple);
             padding: 2rem;
             margin-bottom: 2rem;
             border-radius: 5px;
             box-shadow: inset 0 0 20px rgba(0,0,0,0.7);
-            backdrop-filter: blur(5px); /* Efecto de desenfoque detrás de la caja */
+            backdrop-filter: blur(4px); /* Suave desenfoque detrás de la caja */
         }
         .section-title {
             color: var(--accent-gold);
@@ -121,6 +132,7 @@
             border-top: 1px solid #333;
             color: #666;
             font-size: 0.9rem;
+            background-color: rgba(0,0,0,0.5); /* Fondo ligero para el footer */
         }
         .iframe-container {
             width: 100%;
@@ -135,7 +147,7 @@
     <div class="main-wrapper">
 
         <header>
-            <img src="Logo.png" alt="Logo Códice Arbelo" class="app-logo">
+            <img src="logo.png" alt="Logo Códice Arbelo" class="app-logo">
             <h1>EL CÓDICE ARBELO</h1>
             <h2>Segundo Cerebro Teológico & Existencialismo Gnóstico Crítico</h2>
         </header>
@@ -170,17 +182,17 @@
             </div>
 
             <div style="text-align: center;">
-                <p><i>"El universo es código. Quien entiende el código original, domina su propia reality."</i></p>
+                <p><i>"El universo es código. Quien entiende el código original, domina su propia realidad."</i></p>
                 <a href="mailto:juanarbeloaguilar@gmail.com" class="cta-button">SOLICITAR ACCESO AL CÓDICE</a>
             </div>
 
             <div class="section-box" style="margin-top: 3rem;">
                 <h3 class="section-title">> TERMINAL DE FEEDBACK Y CRÍTICA</h3>
-                <p>El Códice crece con la colisión de ideas. Este es un espacio abierto para el debate. Deja tus críticas, reflexiones o observaciones en la base de datos pública del proyecto.</p>
+                <p>El Códice grows con la colisión de ideas. Este es un espacio abierto para el debate. Deja tus críticas, reflexiones u observaciones en la base de datos pública del proyecto.</p>
                 
                 <div class="iframe-container">
                     <p style="color: #d4af37; border: 1px dashed #4c1130; padding: 2rem; text-align: center; width: 100%;">
-                  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeDMaaoGNFPcbFsJYi7WCi6hfLf557KEIinXoGVNgoCwkD1NQ/viewform?embedded=true" width="640" height="1514" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+                       [EL FORMULARIO DE INTERACCIÓN SE CARGARÁ AQUÍ CUANDO INCRUSTES EL IFRAME DE TU GOOGLE FORM]
                     </p>
                 </div>
             </div>
