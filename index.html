@@ -13,8 +13,10 @@
             --text-main: #e0e0e0;
             --accent-gold: #d4af37;
             --accent-purple: #4c1130;
+            --accent-green: #2e8b57; /* Nuevo color para monetización */
             --glow: 0 0 10px #d4af37, 0 0 20px #4c1130;
-            --bg-overlay: rgba(5, 5, 5, 0.88); /* Capa oscura más opaca */
+            --glow-green: 0 0 10px #2e8b57;
+            --bg-overlay: rgba(5, 5, 5, 0.88);
         }
         
         /* RESET BÁSICO */
@@ -29,17 +31,14 @@
             color: var(--text-main);
             font-family: 'Courier New', Courier, monospace;
             line-height: 1.6;
-            
-            /* FONDO DE PANTALLA SINCRONIZADO (Capitalized) */
             background-image: url('Fondo.png'); 
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             background-repeat: no-repeat;
-            background-color: #000; /* Fondo negro de seguridad */
+            background-color: #000;
         }
         
-        /* Contenedor principal con fondo oscuro (Capa de Legibilidad Púrpura/Oscura) */
         .main-wrapper {
             background-color: var(--bg-overlay);
             min-height: 100vh;
@@ -54,12 +53,11 @@
             border-bottom: 2px solid var(--accent-purple);
         }
         
-        /* LOGO DE LA APP SINCRONIZADO (Capitalized) */
         .app-logo {
-            max-width: 150px; /* Tamaño máximo del logo controlado */
+            max-width: 150px;
             height: auto;
             margin-bottom: 1rem;
-            filter: drop-shadow(var(--glow)); /* Efecto de brillo */
+            filter: drop-shadow(var(--glow));
         }
 
         h1 {
@@ -79,16 +77,16 @@
             max-width: 900px;
             margin: 0 auto;
             padding: 2rem;
-            flex: 1; /* Empuja el footer hacia abajo */
+            flex: 1;
         }
         .section-box {
-            background: rgba(76, 17, 48, 0.15); /* Caja ligeramente púrpura */
+            background: rgba(76, 17, 48, 0.15);
             border: 1px solid var(--accent-purple);
             padding: 2rem;
             margin-bottom: 2rem;
             border-radius: 5px;
             box-shadow: inset 0 0 20px rgba(0,0,0,0.7);
-            backdrop-filter: blur(4px); /* Suave desenfoque detrás */
+            backdrop-filter: blur(4px);
         }
         .section-title {
             color: var(--accent-gold);
@@ -96,6 +94,19 @@
             display: inline-block;
             margin-bottom: 1rem;
         }
+        
+        /* BLOQUE DE ESPECIFICACIONES TÉCNICAS (NUEVO) */
+        .tech-specs {
+            background: rgba(0,0,0,0.5);
+            border-left: 4px solid var(--accent-gold);
+            padding: 1rem;
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+        }
+        .tech-specs strong {
+            color: var(--accent-gold);
+        }
+
         .grid-features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -107,10 +118,19 @@
             border-left: 3px solid var(--accent-gold);
             padding: 1rem;
         }
+        
+        /* CONTENEDOR DE BOTONES (NUEVO) */
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
         .cta-button {
-            display: block;
+            display: inline-block;
             width: 280px;
-            margin: 3rem auto;
             padding: 1rem;
             text-align: center;
             background-color: var(--accent-purple);
@@ -128,13 +148,37 @@
             color: #050505;
             box-shadow: var(--glow);
         }
+
+        /* BOTÓN DE SPONSOR (NUEVO) */
+        .sponsor-button {
+            display: inline-block;
+            width: 280px;
+            padding: 1rem;
+            text-align: center;
+            background-color: transparent;
+            color: var(--accent-green);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: 1px dashed var(--accent-green);
+            border-radius: 3px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .sponsor-button:hover {
+            background-color: var(--accent-green);
+            color: #050505;
+            box-shadow: var(--glow-green);
+            border: 1px solid var(--accent-green);
+        }
+
         footer {
             text-align: center;
             padding: 2rem;
             border-top: 1px solid #333;
             color: #666;
             font-size: 0.9rem;
-            background-color: rgba(0,0,0,0.5); /* Fondo ligero para el footer */
+            background-color: rgba(0,0,0,0.5);
         }
         .iframe-container {
             width: 100%;
@@ -142,12 +186,10 @@
             justify-content: center;
             margin-top: 2rem;
         }
-        
-        /* CSS ESPECÍFICO PARA EL IFRAME RESPONSIVO (NUEVO) */
         .iframe-container iframe {
-            max-width: 100%; /* Blindaje para móviles: nunca más ancho que la pantalla del usuario */
-            border: 1px solid var(--accent-purple); /* Borde estilo Matrix al formulario */
-            box-shadow: 0 0 10px rgba(76, 17, 48, 0.5); /* Suave brillo púrpura */
+            max-width: 100%;
+            border: 1px solid var(--accent-purple);
+            box-shadow: 0 0 10px rgba(76, 17, 48, 0.5);
         }
     </style>
 </head>
@@ -166,6 +208,11 @@
                 <h3 class="section-title">> ESTADO DEL SISTEMA: DESPERTANDO</h3>
                 <p>Bienvenido al Santuario del Código y la Palabra. La historia de la humanidad ha sido dictada por dogmas, fragmentada en miles de denominaciones y controlada por estructuras de poder. El Proyecto Códice Arbelo es una arquitectura de datos diseñada para desmenuzar el libro más influyente del universo: La Biblia.</p>
                 <p>Aquí no se defiende ninguna iglesia. Se expone la matriz completa. Desde la ortodoxia clásica, hasta el conocimiento oculto de los textos Gnósticos y el análisis de la Inteligencia Artificial.</p>
+                
+                <div class="tech-specs">
+                    <strong>> ESPECIFICACIONES DE LA BASE DE DATOS:</strong><br>
+                    El texto principal que nutre este Códice utiliza la <strong>Reina-Valera 1960 (RVR1960)</strong>, por ser el "Sistema Operativo" estándar de la teología hispana. Sin embargo, mediante la "Tenacidad del Buscador", cada versículo es sometido a ingeniería inversa, contrastando la traducción tradicional directamente con el <strong>Código Fuente Original (Texto Masorético en Hebreo y Textus Receptus en Griego)</strong> para exponer fallos, sesgos y secretos milenarios.
+                </div>
             </div>
 
             <div class="section-box">
@@ -192,10 +239,14 @@
 
             <div style="text-align: center;">
                 <p><i>"El universo es código. Quien entiende el código original, domina su propia realidad."</i></p>
-                <a href="mailto:juanarbeloaguilar@gmail.com" class="cta-button">SOLICITAR ACCESO AL CÓDICE</a>
+                
+                <div class="button-container">
+                    <a href="mailto:juanarbeloaguilar@gmail.com" class="cta-button">SOLICITAR ACCESO AL CÓDICE</a>
+                    <a href="#" class="sponsor-button" onclick="alert('Sistema de Sponsors en fase de calibración. ¡Pronto podrás apoyar el proyecto!'); return false;">APOYAR EL PROYECTO (SPONSORS)</a>
+                </div>
             </div>
 
-            <div class="section-box" style="margin-top: 3rem;">
+            <div class="section-box">
                 <h3 class="section-title">> TERMINAL DE FEEDBACK Y CRÍTICA</h3>
                 <p>El Códice crece con la colisión de ideas. Este es un espacio abierto para el debate. Deja tus críticas, reflexiones u observaciones en la base de datos pública del proyecto.</p>
                 
@@ -211,5 +262,7 @@
             <p>Conectado al motor: OMEGA Master Dev.</p>
         </footer>
 
-    </div> </body>
+    </div>
+
+</body>
 </html>
