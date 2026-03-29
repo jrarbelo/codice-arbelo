@@ -3,34 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Santuario del Código y la Palabra | Códice Arbelo</title>
+    <title>Santuario del Código y la Palabra | Juan Arbelo</title>
+    <link rel="icon" type="image/png" href="icono.png">
     <style>
         /* CSS: El diseño visual de la Matrix */
         :root {
-            --bg-color: #050505;
             --text-main: #e0e0e0;
             --accent-gold: #d4af37;
             --accent-purple: #4c1130;
             --glow: 0 0 10px #d4af37, 0 0 20px #4c1130;
+            --bg-overlay: rgba(5, 5, 5, 0.85); /* Capa oscura para legibilidad */
         }
         body {
             margin: 0;
             padding: 0;
-            background-color: var(--bg-color);
             color: var(--text-main);
             font-family: 'Courier New', Courier, monospace;
             line-height: 1.6;
-            background-image: radial-gradient(circle at 50% 0%, #1a0812 0%, #050505 70%);
+            
+            /* FONDO DE PANTALLA SINCRONIZADO */
+            background-image: url('fondo.png'); /* Si es PNG, cámbialo a fondo.png */
+            background-size: cover; /* Cubre toda la pantalla */
+            background-position: center; /* Centrado */
+            background-attachment: fixed; /* Efecto Parallax (fijo al hacer scroll) */
+            background-repeat: no-repeat;
         }
+        
+        /* Contenedor principal con fondo oscuro para resaltar texto */
+        .main-wrapper {
+            background-color: var(--bg-overlay);
+            min-height: 100vh;
+            width: 100%;
+        }
+
         header {
             text-align: center;
             padding: 4rem 2rem;
             border-bottom: 2px solid var(--accent-purple);
         }
+        
+        /* LOGO DE LA APP SINCRONIZADO */
+        .app-logo {
+            max-width: 150px; /* Ajusta el tamaño de tu logo aquí */
+            height: auto;
+            margin-bottom: 1rem;
+            filter: drop-shadow(var(--glow)); /* Efecto de brillo al logo */
+        }
+
         h1 {
             color: var(--accent-gold);
             text-shadow: var(--glow);
             font-size: 3rem;
+            margin-top: 0;
             margin-bottom: 0.5rem;
             letter-spacing: 2px;
         }
@@ -45,12 +69,13 @@
             padding: 2rem;
         }
         .section-box {
-            background: rgba(76, 17, 48, 0.1);
+            background: rgba(76, 17, 48, 0.2); /* Un poco más opaco */
             border: 1px solid var(--accent-purple);
             padding: 2rem;
             margin-bottom: 2rem;
             border-radius: 5px;
-            box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.7);
+            backdrop-filter: blur(5px); /* Efecto de desenfoque detrás de la caja */
         }
         .section-title {
             color: var(--accent-gold);
@@ -71,14 +96,14 @@
         }
         .cta-button {
             display: block;
-            width: 250px;
+            width: 280px;
             margin: 3rem auto;
             padding: 1rem;
             text-align: center;
             background-color: var(--accent-purple);
             color: var(--accent-gold);
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: bold;
             border: 1px solid var(--accent-gold);
             border-radius: 3px;
@@ -87,7 +112,7 @@
         }
         .cta-button:hover {
             background-color: var(--accent-gold);
-            color: var(--bg-color);
+            color: #050505;
             box-shadow: var(--glow);
         }
         footer {
@@ -107,62 +132,65 @@
 </head>
 <body>
 
-    <header>
-        <h1>EL CÓDICE ARBELO</h1>
-        <h2>Segundo Cerebro Teológico & Existencialismo Gnóstico Crítico</h2>
-    </header>
+    <div class="main-wrapper">
 
-    <div class="container">
-        <div class="section-box">
-            <h3 class="section-title">> ESTADO DEL SISTEMA: DESPERTANDO</h3>
-            <p>Bienvenido al Santuario del Código y la Palabra. La historia de la humanidad ha sido dictada por dogmas, fragmentada en miles de denominaciones y controlada por estructuras de poder. El Proyecto Códice Arbelo es una arquitectura de datos diseñada para desmenuzar el libro más influyente del universo: La Biblia.</p>
-            <p>Aquí no se defiende ninguna iglesia. Se expone la matriz completa. Desde la ortodoxia clásica, hasta el conocimiento oculto de los textos Gnósticos y el análisis de la Inteligencia Artificial.</p>
-        </div>
+        <header>
+            <img src="logo.png" alt="Logo Códice Arbelo" class="app-logo">
+            <h1>EL CÓDICE ARBELO</h1>
+            <h2>Segundo Cerebro Teológico & Existencialismo Gnóstico Crítico</h2>
+        </header>
 
-        <div class="section-box">
-            <h3 class="section-title">> ARQUITECTURA DE LA MATRIX (CARACTERÍSTICAS)</h3>
-            <div class="grid-features">
-                <div class="feature-card">
-                    <h4 style="color: var(--accent-gold); margin-top: 0;">Ortodoxia & Reforma</h4>
-                    <p>Análisis exhaustivo de las visiones históricas. La anatomía del dogma al descubierto.</p>
-                </div>
-                <div class="feature-card">
-                    <h4 style="color: var(--accent-gold); margin-top: 0;">La Gnosis (Conocimiento)</h4>
-                    <p>El "Glitch" del sistema. Textos apócrifos y la revelación de la chispa divina atrapada en la materia.</p>
-                </div>
-                <div class="feature-card">
-                    <h4 style="color: var(--accent-gold); margin-top: 0;">Análisis Algorítmico (IA)</h4>
-                    <p>Una red neuronal cruzando datos teológicos para encontrar patrones invisibles.</p>
-                </div>
-                <div class="feature-card">
-                    <h4 style="color: var(--accent-gold); margin-top: 0;">Existencialismo Crítico</h4>
-                    <p>Las anotaciones filosóficas de Juan Arbelo. La lógica y la "Tenacidad del Buscador" —forjada a lo largo de una vida explorando múltiples religiones y disciplinas— aplicadas a la hermenéutica pura.</p>
+        <div class="container">
+            <div class="section-box">
+                <h3 class="section-title">> ESTADO DEL SISTEMA: DESPERTANDO</h3>
+                <p>Bienvenido al Santuario del Código y la Palabra. La historia de la humanidad ha sido dictada por dogmas, fragmentada en miles de denominaciones y controlada por estructuras de poder. El Proyecto Códice Arbelo es una arquitectura de datos diseñada para desmenuzar el libro más influyente del universo: La Biblia.</p>
+                <p>Aquí no se defiende ninguna iglesia. Se expone la matriz completa. Desde la ortodoxia clásica, hasta el conocimiento oculto de los textos Gnósticos y el análisis de la Inteligencia Artificial.</p>
+            </div>
+
+            <div class="section-box">
+                <h3 class="section-title">> ARQUITECTURA DE LA MATRIX (CARACTERÍSTICAS)</h3>
+                <div class="grid-features">
+                    <div class="feature-card">
+                        <h4 style="color: var(--accent-gold); margin-top: 0;">Ortodoxia & Reforma</h4>
+                        <p>Análisis exhaustivo de las visiones históricas. La anatomía del dogma al descubierto.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4 style="color: var(--accent-gold); margin-top: 0;">La Gnosis (Conocimiento)</h4>
+                        <p>El "Glitch" del sistema. Textos apócrifos y la revelación de la chispa divina atrapada en la materia.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4 style="color: var(--accent-gold); margin-top: 0;">Análisis Algorítmico (IA)</h4>
+                        <p>Una red neuronal cruzando datos teológicos para encontrar patrones invisibles.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4 style="color: var(--accent-gold); margin-top: 0;">Existencialismo Crítico</h4>
+                        <p>Las anotaciones filosóficas de Juan Arbelo. La lógica y la "Tenacidad del Buscador" —forjada a lo largo de una vida explorando múltiples religiones y disciplinas— aplicadas a la hermenéutica pura.</p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div style="text-align: center;">
-            <p><i>"El universo es código. Quien entiende el código original, domina su propia realidad."</i></p>
-            <a href="mailto:juanarbeloaguilar@gmail.com" class="cta-button">SOLICITAR ACCESO AL CÓDICE</a>
-        </div>
+            <div style="text-align: center;">
+                <p><i>"El universo es código. Quien entiende el código original, domina su propia reality."</i></p>
+                <a href="mailto:juanarbeloaguilar@gmail.com" class="cta-button">SOLICITAR ACCESO AL CÓDICE</a>
+            </div>
 
-        <div class="section-box" style="margin-top: 3rem;">
-            <h3 class="section-title">> TERMINAL DE FEEDBACK Y CRÍTICA</h3>
-            <p>El Códice crece con la colisión de ideas. Este es un espacio abierto para el debate. Deja tus críticas, reflexiones, opiniones u observaciones en la base de datos pública del proyecto.</p>
-            
-            <div class="iframe-container">
-                <p style="color: #d4af37; border: 1px dashed #4c1130; padding: 2rem; text-align: center; width: 100%;">
+            <div class="section-box" style="margin-top: 3rem;">
+                <h3 class="section-title">> TERMINAL DE FEEDBACK Y CRÍTICA</h3>
+                <p>El Códice crece con la colisión de ideas. Este es un espacio abierto para el debate. Deja tus críticas, reflexiones o observaciones en la base de datos pública del proyecto.</p>
+                
+                <div class="iframe-container">
+                    <p style="color: #d4af37; border: 1px dashed #4c1130; padding: 2rem; text-align: center; width: 100%;">
                   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeDMaaoGNFPcbFsJYi7WCi6hfLf557KEIinXoGVNgoCwkD1NQ/viewform?embedded=true" width="640" height="1514" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-                </p>
+                    </p>
+                </div>
             </div>
+
         </div>
 
-    </div>
+        <footer>
+            <p>Iniciado en Ciudad de la Costa, Uruguay. Proyecto de Juan Arbelo.</p>
+            <p>Conectado al motor: OMEGA Master Dev.</p>
+        </footer>
 
-    <footer>
-        <p>Iniciado en Ciudad de la Costa, Uruguay. Proyecto de Juan Arbelo.</p>
-        <p>Conectado al motor: OMEGA Master Dev.</p>
-    </footer>
-
-</body>
+    </div> </body>
 </html>
