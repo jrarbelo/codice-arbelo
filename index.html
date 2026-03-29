@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Santuario del Código y la Palabra | Juan Arbelo</title>
+    
     <link rel="icon" type="image/png" href="Icono.png">
+
     <style>
         /* CSS: El diseño visual de la Matrix */
         :root {
@@ -12,10 +14,10 @@
             --accent-gold: #d4af37;
             --accent-purple: #4c1130;
             --glow: 0 0 10px #d4af37, 0 0 20px #4c1130;
-            --bg-overlay: rgba(5, 5, 5, 0.88); /* Capa oscura más opaca para legibilidad */
+            --bg-overlay: rgba(5, 5, 5, 0.88); /* Capa oscura más opaca */
         }
         
-        /* RESET BÁSICO PARA EVITAR FALLOS DE MARGENES */
+        /* RESET BÁSICO */
         html, body {
             margin: 0;
             padding: 0;
@@ -28,16 +30,16 @@
             font-family: 'Courier New', Courier, monospace;
             line-height: 1.6;
             
-            /* FONDO DE PANTALLA SINCRONIZADO (Blindado) */
-            background-image: url('Fondo.jpg'); /* ASEGÚRATE DE QUE EL ARCHIVO EN GITHUB SE LLAME EXACTAMENTE fondo.jpg EN MINÚSCULAS */
+            /* FONDO DE PANTALLA SINCRONIZADO (Capitalized) */
+            background-image: url('Fondo.png'); 
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             background-repeat: no-repeat;
-            background-color: #000; /* Fondo negro de seguridad si falla la imagen */
+            background-color: #000; /* Fondo negro de seguridad */
         }
         
-        /* Contenedor principal con fondo oscuro (Capa de Legibilidad) */
+        /* Contenedor principal con fondo oscuro (Capa de Legibilidad Púrpura/Oscura) */
         .main-wrapper {
             background-color: var(--bg-overlay);
             min-height: 100vh;
@@ -52,7 +54,7 @@
             border-bottom: 2px solid var(--accent-purple);
         }
         
-        /* LOGO DE LA APP SINCRONIZADO (Blindado) */
+        /* LOGO DE LA APP SINCRONIZADO (Capitalized) */
         .app-logo {
             max-width: 150px; /* Tamaño máximo del logo controlado */
             height: auto;
@@ -86,7 +88,7 @@
             margin-bottom: 2rem;
             border-radius: 5px;
             box-shadow: inset 0 0 20px rgba(0,0,0,0.7);
-            backdrop-filter: blur(4px); /* Suave desenfoque detrás de la caja */
+            backdrop-filter: blur(4px); /* Suave desenfoque detrás */
         }
         .section-title {
             color: var(--accent-gold);
@@ -140,6 +142,13 @@
             justify-content: center;
             margin-top: 2rem;
         }
+        
+        /* CSS ESPECÍFICO PARA EL IFRAME RESPONSIVO (NUEVO) */
+        .iframe-container iframe {
+            max-width: 100%; /* Blindaje para móviles: nunca más ancho que la pantalla del usuario */
+            border: 1px solid var(--accent-purple); /* Borde estilo Matrix al formulario */
+            box-shadow: 0 0 10px rgba(76, 17, 48, 0.5); /* Suave brillo púrpura */
+        }
     </style>
 </head>
 <body>
@@ -188,12 +197,10 @@
 
             <div class="section-box" style="margin-top: 3rem;">
                 <h3 class="section-title">> TERMINAL DE FEEDBACK Y CRÍTICA</h3>
-                <p>El Códice grows con la colisión de ideas. Este es un espacio abierto para el debate. Deja tus críticas, reflexiones u observaciones en la base de datos pública del proyecto.</p>
+                <p>El Códice crece con la colisión de ideas. Este es un espacio abierto para el debate. Deja tus críticas, reflexiones u observaciones en la base de datos pública del proyecto.</p>
                 
                 <div class="iframe-container">
-                    <p style="color: #d4af37; border: 1px dashed #4c1130; padding: 2rem; text-align: center; width: 100%;">
                     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeDMaaoGNFPcbFsJYi7WCi6hfLf557KEIinXoGVNgoCwkD1NQ/viewform?embedded=true" width="640" height="1514" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-                    </p>
                 </div>
             </div>
 
