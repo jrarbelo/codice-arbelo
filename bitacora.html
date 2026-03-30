@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora del Arquitecto | Códice Arbelo</title>
+    
+    <link rel="icon" type="image/png" href="Icono.png">
+
+    <style>
+        /* CSS BLINDADO DE LA BITÁCORA */
+        :root {
+            --text-main: #e0e0e0;
+            --accent-gold: #d4af37;
+            --accent-purple: #4c1130;
+            --glow: 0 0 10px #d4af37, 0 0 20px #4c1130;
+            --bg-overlay: rgba(5, 5, 5, 0.90);
+        }
+        
+        html, body {
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
+            color: var(--text-main);
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.6;
+            background-image: url('Fondo.png'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-color: #000;
+        }
+        
+        .main-wrapper {
+            background-color: var(--bg-overlay);
+            flex: 1;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* NAVEGACIÓN BLINDADA (NUEVO PROTOCOLO) */
+        nav {
+            background-color: rgba(0,0,0,0.7);
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--accent-purple);
+            text-align: right;
+        }
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        nav a:hover, nav a.active {
+            color: var(--accent-gold);
+            text-shadow: 0 0 5px var(--accent-gold);
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 2rem;
+            border-bottom: 2px solid var(--accent-purple);
+        }
+        
+        .app-logo {
+            max-width: 100px;
+            height: auto;
+            margin-bottom: 1rem;
+            filter: drop-shadow(var(--glow));
+        }
+
+        h1 {
+            color: var(--accent-gold);
+            text-shadow: var(--glow);
+            font-size: 2.5rem;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+        }
+        h2 {
+            color: #888;
+            font-weight: normal;
+            font-size: 1.1rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            flex: 1;
+        }
+        
+        /* ESTILOS PARA ENTRADAS DE BITÁCORA */
+        .log-entry {
+            background: rgba(10, 10, 10, 0.8);
+            border: 1px solid #333;
+            border-left: 3px solid var(--accent-purple);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 3px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+        .log-date {
+            color: var(--accent-gold);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px dashed #333;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        .log-entry h3 {
+            color: var(--text-main);
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        .log-entry p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        .log-entry ul {
+            border-left: 1px solid #333;
+            padding-left: 1.5rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid #333;
+            color: #666;
+            font-size: 0.9rem;
+            background-color: rgba(0,0,0,0.5);
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-wrapper">
+
+        <nav>
+            <a href="index.html">INICIO</a>
+            <a href="bitacora.html" class="active">BITÁCORA</a>
+        </nav>
+
+        <header>
+            <img src="Logo.png" alt="Logo Códice Arbelo" class="app-logo">
+            <h1>BITÁCORA DEL ARQUITECTO</h1>
+            <h2>Reflexiones en Vivo del Desarrollo del Códice Arbelo</h2>
+        </header>
+
+        <div class="container">
+            
+            <div class="log-entry">
+                <div class="log-date">> REGISTRO DE DATOS: 2026.03.30.1420</div>
+                <h3>INICIANDO EL PROTOCOLO DE EXPANSIÓN (DLC)</h3>
+                <p>He dado la orden de compilar el primer "Paquete de Expansión" para la interfaz web. El Códice no puede ser solo una página de aterrizaje estática; debe demostrar la potencia del "Segundo Cerebro Teológico".</p>
+                <p>En este despliegue masivo, estamos inyectando:</p>
+                <ul>
+                    <li>El Glosario Gnóstico Crítico para nivelar el intelecto de los buscadores.</li>
+                    <li>Una sección para presumir el "Motor SQL" real que opera en AppSheet, con una muestra visual de alta fidelidad cruzando múltiples denominaciones.</li>
+                    <li>Este mismo archivo (`bitacora.html`) como un espacio dedicado para mis reflexiones y "Devlogs".</li>
+                </ul>
+                <p>Mientras la Matrix pública se expande, mi motor interno sigue farmeando el Nivel 4: Génesis Capítulo 4. La rebelión intelectual ha comenzado.</p>
+            </div>
+
+            <div style="text-align:center; color:#666; font-style:italic; margin-top:3rem;">
+                [Nuevos registros se inyectarán aquí en futuras actualizaciones del núcleo]
+            </div>
+
+        </div>
+
+        <footer>
+            <p>Iniciado en Ciudad de la Costa, Uruguay. Proyecto de Juan Arbelo.</p>
+            <p>Conectado al motor: OMEGA Master Dev.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
