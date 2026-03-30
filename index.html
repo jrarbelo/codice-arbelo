@@ -14,9 +14,11 @@
             --accent-gold: #d4af37;
             --accent-purple: #4c1130;
             --accent-mp: #009ee3; /* Azul MercadoPago */
-            --accent-bmc: #ff813f; /* Naranja Buy Me a Coffee / Internacional */
+            --accent-pp: #0079C1; /* Azul PayPal */
+            --accent-bmc: #ff813f; /* Naranja Buy Me a Coffee */
             --glow: 0 0 10px #d4af37, 0 0 20px #4c1130;
             --glow-mp: 0 0 10px #009ee3;
+            --glow-pp: 0 0 10px #0079C1;
             --glow-bmc: 0 0 10px #ff813f;
             --bg-overlay: rgba(5, 5, 5, 0.88);
         }
@@ -107,6 +109,21 @@
             color: var(--accent-gold);
         }
 
+        /* ESTILOS PARA LA RESEÑA EVOLUTIVA */
+        .lore-box {
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px dashed var(--accent-gold);
+            padding: 1.5rem;
+            margin-top: 2rem;
+            border-radius: 3px;
+        }
+        .lore-box h4 {
+            color: var(--accent-gold);
+            margin-top: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
         .grid-features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -162,13 +179,26 @@
             border: 1px solid var(--accent-mp);
         }
 
-        /* BOTÓN INTERNACIONAL */
-        .btn-intl {
+        /* BOTÓN PAYPAL */
+        .btn-pp {
+            background-color: transparent;
+            color: var(--accent-pp);
+            border: 1px dashed var(--accent-pp);
+        }
+        .btn-pp:hover {
+            background-color: var(--accent-pp);
+            color: #fff;
+            box-shadow: var(--glow-pp);
+            border: 1px solid var(--accent-pp);
+        }
+
+        /* BOTÓN BUY ME A COFFEE */
+        .btn-bmc {
             background-color: transparent;
             color: var(--accent-bmc);
             border: 1px dashed var(--accent-bmc);
         }
-        .btn-intl:hover {
+        .btn-bmc:hover {
             background-color: var(--accent-bmc);
             color: #fff;
             box-shadow: var(--glow-bmc);
@@ -219,7 +249,7 @@
             </div>
 
             <div class="section-box">
-                <h3 class="section-title">> ARQUITECTURA DE LA MATRIX (CARACTERÍSTICAS)</h3>
+                <h3 class="section-title">> ARQUITECTURA DE LA MATRIX</h3>
                 <div class="grid-features">
                     <div class="feature-card">
                         <h4 style="color: var(--accent-gold); margin-top: 0;">Ortodoxia & Reforma</h4>
@@ -234,9 +264,15 @@
                         <p>Una red neuronal cruzando datos teológicos para encontrar patrones invisibles.</p>
                     </div>
                     <div class="feature-card">
-                        <h4 style="color: var(--accent-gold); margin-top: 0;">Existencialismo Gnóstico Crítico</h4>
-                        <p>Las anotaciones filosóficas de Juan Arbelo. La lógica y la "Tenacidad del Buscador" —forjada a lo largo de una vida explorando múltiples religiones y disciplinas— aplicadas a la hermenéutica pura.</p>
+                        <h4 style="color: var(--accent-gold); margin-top: 0;">Filosofía Arbelo</h4>
+                        <p>La lógica y la "Tenacidad del Buscador" —forjada a lo largo de una vida explorando múltiples religiones y disciplinas— aplicadas a la hermenéutica pura.</p>
                     </div>
+                </div>
+
+                <div class="lore-box">
+                    <h4>> PATCH NOTES: LA EVOLUCIÓN FILOSÓFICA</h4>
+                    <p>En sus primeras compilaciones, el Códice operaba bajo la nomenclatura de <strong>Existencialismo Crítico Gnóstico</strong>. En esa fase, el sistema operativo principal era el cuestionamiento racional (Existencialismo Crítico), utilizando la Gnosis simplemente como un "parche" secundario para entender la realidad ilusoria material.</p>
+                    <p>Sin embargo, a medida que la investigación de Juan Arbelo desenterraba los misterios más densos del código bíblico, la arquitectura del pensamiento se reescribió hacia el <strong>Existencialismo Gnóstico Crítico</strong>. La Gnosis —la certeza de que somos chispas divinas exiliadas en un universo material manipulado (Demiurgo)— se convirtió en la naturaleza principal de la plataforma. La palabra "Crítico" se movió al final de la sintaxis para actuar como el escudo definitivo: un cortafuegos que indica que el Códice asume la Gnosis, pero nunca ciegamente. Toda revelación es cuestionada implacablemente por la Tenacidad del Buscador antes de ser aceptada.</p>
                 </div>
             </div>
 
@@ -248,7 +284,9 @@
                     
                     <a href="PEGA_AQUI_TU_LINK_MERCADOPAGO" class="cta-button btn-mp" target="_blank">APOYO LOCAL (MERCADOPAGO)</a>
                     
-                    <a href="PEGA_AQUI_TU_LINK_INTERNACIONAL" class="cta-button btn-intl" target="_blank">APOYO INTERNACIONAL</a>
+                    <a href="PEGA_AQUI_TU_LINK_PAYPAL" class="cta-button btn-pp" target="_blank">APOYO INTL (PAYPAL)</a>
+                    
+                    <a href="PEGA_AQUI_TU_LINK_COFFEE" class="cta-button btn-bmc" target="_blank">APOYO INTL (COFFEE)</a>
                 </div>
             </div>
 
