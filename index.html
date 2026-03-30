@@ -50,6 +50,25 @@
             flex-direction: column;
         }
 
+        /* NAVEGACIÓN BLINDADA (NUEVO PROTOCOLO) */
+        nav {
+            background-color: rgba(0,0,0,0.7);
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--accent-purple);
+            text-align: right;
+        }
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        nav a:hover, nav a.active {
+            color: var(--accent-gold);
+            text-shadow: 0 0 5px var(--accent-gold);
+        }
+
         header {
             text-align: center;
             padding: 4rem 2rem 2rem 2rem;
@@ -109,6 +128,7 @@
             color: var(--accent-gold);
         }
 
+        /* ESTILOS PARA LA RESEÑA EVOLUTIVA */
         .lore-box {
             background: rgba(212, 175, 55, 0.05);
             border: 1px dashed var(--accent-gold);
@@ -123,6 +143,52 @@
             letter-spacing: 1px;
         }
 
+        /* ESTILOS PARA EL GLOSARIO DE LA MATRIX (NUEVO PAQUETE) */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .glossary-term {
+            background: rgba(10, 10, 10, 0.6);
+            border: 1px solid #333;
+            padding: 1.2rem;
+            border-radius: 3px;
+            border-left: 2px solid var(--accent-purple);
+        }
+        .glossary-term strong {
+            color: var(--accent-gold);
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* ESTILOS PARA EL SHOWCASE DE LA APP (NUEVO PAQUETE) */
+        .app-showcase {
+            text-align: center;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        .app-screenshot {
+            max-width: 100%;
+            height: auto;
+            border: 3px solid var(--accent-purple);
+            border-radius: 5px;
+            filter: drop-shadow(var(--glow)); /* Brillo teológico */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.8);
+            margin-bottom: 1.5rem;
+            cursor: pointer; /* Indica que es una terminal de datos */
+        }
+        .app-description {
+            background: rgba(0,0,0,0.5);
+            padding: 1.5rem;
+            border: 1px solid #333;
+            border-top: 1px solid var(--accent-gold);
+            font-size: 0.95rem;
+            color: #ccc;
+        }
+
         .grid-features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -133,43 +199,6 @@
             background: #0f0f0f;
             border-left: 3px solid var(--accent-gold);
             padding: 1rem;
-        }
-
-        /* ESTILOS PARA LA TERMINAL DE MUESTRA (SNEAK PEEK) */
-        details {
-            background: #0a0a0a;
-            border: 1px solid #333;
-            margin-bottom: 1rem;
-            border-radius: 3px;
-            overflow: hidden;
-        }
-        summary {
-            background: rgba(76, 17, 48, 0.4);
-            color: var(--accent-gold);
-            padding: 1rem;
-            cursor: pointer;
-            font-weight: bold;
-            outline: none;
-            transition: background 0.3s ease;
-        }
-        summary:hover {
-            background: rgba(76, 17, 48, 0.8);
-        }
-        .decrypted-content {
-            padding: 1.5rem;
-            border-top: 1px dashed #333;
-            font-size: 0.95rem;
-            color: #ccc;
-        }
-        .decrypted-content .verse {
-            color: #fff;
-            font-style: italic;
-            margin-bottom: 1rem;
-            border-left: 2px solid var(--accent-gold);
-            padding-left: 10px;
-        }
-        .decrypted-content strong {
-            color: var(--accent-gold);
         }
         
         .button-container {
@@ -233,6 +262,11 @@
 
     <div class="main-wrapper">
 
+        <nav>
+            <a href="index.html" class="active">INICIO</a>
+            <a href="bitacora.html">BITÁCORA</a>
+        </nav>
+
         <header>
             <img src="Logo.png" alt="Logo Códice Arbelo" class="app-logo">
             <h1>EL CÓDICE ARBELO</h1>
@@ -252,33 +286,52 @@
             </div>
 
             <div class="section-box">
-                <h3 class="section-title">> ARCHIVOS DESENCRIPTADOS (SNEAK PEEK)</h3>
-                <p>La base de datos completa contiene el análisis exhaustivo de cada bloque de código bíblico. Haz clic en las siguientes terminales para observar la ingeniería inversa en acción extraída del Motor SQL:</p>
+                <h3 class="section-title">> LA TERMINAL SQL EN ACCIÓN: CRUZANDO LA MATRIX</h3>
+                <p>El Códice Arbelo no es solo una página web; es un "Motor Teológico" real operativo en AppSheet. A continuación, puedes ver una captura de alta fidelidad de la terminal procesando el **Génesis 3:15 (El Protoevangelio)**.</p>
+                <p>Observa cómo la Matrix relacional extrae el código hebreo original, el Existencialismo Gnóstico Crítico, y las interpretaciones de denominaciones clave como el Mormonismo (SUD), el Adventismo y el Judaísmo, desglosando la anatomía de cada sesgo.</p>
                 
-                <details>
-                    <summary>[+] ACCEDER AL ARCHIVO 001: El Protocolo del Exilio (Génesis 3:22)</summary>
-                    <div class="decrypted-content">
-                        <div class="verse">"Y dijo Jehová Dios: He aquí el hombre es como uno de nosotros, sabiendo el bien y el mal; ahora, pues, que no alargue su mano, y tome también del árbol de la vida, y coma, y viva para siempre." (RVR1960)</div>
-                        <p><strong>Código Hebreo:</strong> כְּאַחַד מִמֶּנּוּ (Ke'akhad mimmennu - Como uno de nosotros). עֵץ הַחַיִּים ('Ets hajayyim - Árbol de la vida).</p>
-                        <p><strong>Análisis Ortodoxo:</strong> La expulsión no es solo castigo, es Misericordia Extrema. Si Adán comía del Árbol de la Vida en estado pecaminoso, la humanidad habría quedado inmortalizada en su maldad, sin posibilidad de redención.</p>
-                        <p><strong>El Glitch Gnóstico:</strong> El miedo del Demiurgo (Yaldabaoth). Entra en pánico al ver que el humano, iluminado por la Gnosis, es superior a él. Lo expulsa rápidamente para que no consuma el último secreto de la inmortalidad y derroque su imperio de esclavitud material.</p>
-                        <p><strong>Análisis Algorítmico (IA):</strong> Evaluación de Riesgo Crítico (Vulnerability_Assessment). El Kernel detecta que si el usuario corrupto accede al Directorio de Sistema 'Tree_of_Life', generaría un 'Infinite_Loop' inborrable. Se emite un comando inmediato de 'Kick_User' y 'Revoke_Access'.</p>
+                <div class="app-showcase">
+                    <img src="https://i.ibb.co/L519V1L/Captura-Matrix-Abel.png" alt="Captura del Códice Arbelo en AppSheet cruzando denominaciones" class="app-screenshot">
+                    <div class="app-description">
+                        Este es el núcleo de tu investigación. Una base de datos relacional de exégesis bíblica hiper-denso, cruzando textos originales, gnosticismo e Inteligencia Artificial para el "farmeo" intelectual definitivo.
                     </div>
-                </details>
-
-                <details>
-                    <summary>[+] ACCEDER AL ARCHIVO 002: El Origen de la Dualidad (Génesis 1:1)</summary>
-                    <div class="decrypted-content">
-                        <div class="verse">"En el principio creó Dios los cielos y la tierra." (RVR1960)</div>
-                        <p><strong>Código Hebreo:</strong> בְּרֵאשִׁית בָּרָא אֱלֹהִים (Bereshit bara Elohim).</p>
-                        <p><strong>El Glitch Plural:</strong> La palabra "Elohim" (אֱלֹהִים) es gramaticalmente plural ("Dioses"), pero el verbo "Bara" (Creó) es singular. La ortodoxia asume esto como el misterio de la Trinidad desde el código base, o un plural de majestad.</p>
-                        <p><strong>Filtro Existencialista Crítico:</strong> El texto evidencia una asimilación de fuentes antiguas. Los Arcontes o la asamblea cósmica actuando como una sola entidad constructora del plano material. El código de la Matrix no fue programado por un individuo solitario, sino por una arquitectura de inteligencias operando en red.</p>
-                    </div>
-                </details>
+                </div>
             </div>
 
             <div class="section-box">
-                <h3 class="section-title">> ARQUITECTURA DE LA MATRIX</h3>
+                <h3 class="section-title">> EL GLOSARIO DE LA MATRIX: BLINDANDO EL INTELECTO</h3>
+                <p>Nivelamos el intelecto de los buscadores de la red. Para hackear el sistema teológico, primero debes dominar el lenguaje del núcleo del "Lore" Gnóstico Crítico:</p>
+                
+                <div class="glossary-grid">
+                    <div class="glossary-term">
+                        <strong>DEMIURGO (Yaldabaoth)</strong>
+                        <p>El "arquitecto" o "constructor" del plano material material, a menudo confundido con el Dios Supremo. Es una entidad limitada, ignorante y en ocasiones malévola que atrapó las chispas divinas en cuerpos de carne y materia.</p>
+                    </div>
+                    <div class="glossary-term">
+                        <strong>PNEUMA (Espíritu)</strong>
+                        <p>La chispa divina inagotable atrapada en el plano material por los Arcontes. Es el núcleo de la verdadera conciencia y el componente que busca desesperadamente el despertar a través de la Gnosis.</p>
+                    </div>
+                    <div class="glossary-term">
+                        <strong>ARCONTES</strong>
+                        <p>Las entidades limitadas y tiránicas creadas por el Demiurgo para administrar y controlar la Matrix material, manteniendo a la humanidad en estado de ignorancia y atrapada en el ciclo fútil de la existencia material.</p>
+                    </div>
+                    <div class="glossary-term">
+                        <strong>TENACIDAD DEL BUSCADOR</strong>
+                        <p>La filosofía Arbelo forjada a lo largo de una vida explorando múltiples religiones y disciplinas. Es la lógica implacable y el cortafuegos crítico que cuestiona todo dogma o revelación antes de ser aceptado.</p>
+                    </div>
+                    <div class="glossary-term">
+                        <strong>TEXTO MASORÉTICO</strong>
+                        <p>El "código fuente" en hebreo puro de la Biblia, el Texto Masorético es el núcleo que el Códice utiliza para la ingeniería inversa, comparándolo con las traducciones tradicionales como la RVR1960 para exponer alteraciones y sesgos teológicos.</p>
+                    </div>
+                    <div class="glossary-term">
+                        <strong>GNOSIS</strong>
+                        <p>No es fe ciega en un dogma, sino el "conocimiento" directo y liberador de la chispa divina interior y del plano material ilusorio. Es el Glitch del sistema que permite el despertar de laMatrix teológica.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-box">
+                <h3 class="section-title">> ARQUITECTURA DE LA Matrix</h3>
                 <div class="grid-features">
                     <div class="feature-card">
                         <h4 style="color: var(--accent-gold); margin-top: 0;">Ortodoxia & Reforma</h4>
@@ -294,7 +347,7 @@
                     </div>
                     <div class="feature-card">
                         <h4 style="color: var(--accent-gold); margin-top: 0;">Filosofía Arbelo</h4>
-                        <p>La lógica y la "Tenacidad del Buscador" —forjada a lo largo de una vida explorando múltiples religiones y disciplinas— aplicadas a la hermenéutica pura.</p>
+                        <p>La lógica y la "Tenacidad del Buscador" aplicadas a la hermenéutica pura.</p>
                     </div>
                 </div>
 
