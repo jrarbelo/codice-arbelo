@@ -13,13 +13,14 @@
             --text-main: #e0e0e0;
             --accent-gold: #d4af37;
             --accent-purple: #4c1130;
-            --accent-green: #2e8b57; /* Nuevo color para monetización */
+            --accent-mp: #009ee3; /* Azul MercadoPago */
+            --accent-bmc: #ff813f; /* Naranja Buy Me a Coffee / Internacional */
             --glow: 0 0 10px #d4af37, 0 0 20px #4c1130;
-            --glow-green: 0 0 10px #2e8b57;
+            --glow-mp: 0 0 10px #009ee3;
+            --glow-bmc: 0 0 10px #ff813f;
             --bg-overlay: rgba(5, 5, 5, 0.88);
         }
         
-        /* RESET BÁSICO */
         html, body {
             margin: 0;
             padding: 0;
@@ -95,7 +96,6 @@
             margin-bottom: 1rem;
         }
         
-        /* BLOQUE DE ESPECIFICACIONES TÉCNICAS (NUEVO) */
         .tech-specs {
             background: rgba(0,0,0,0.5);
             border-left: 4px solid var(--accent-gold);
@@ -119,7 +119,7 @@
             padding: 1rem;
         }
         
-        /* CONTENEDOR DE BOTONES (NUEVO) */
+        /* CONTENEDOR DE BOTONES MONETIZACIÓN */
         .button-container {
             display: flex;
             flex-wrap: wrap;
@@ -130,13 +130,13 @@
 
         .cta-button {
             display: inline-block;
-            width: 280px;
+            width: 250px;
             padding: 1rem;
             text-align: center;
             background-color: var(--accent-purple);
             color: var(--accent-gold);
             text-decoration: none;
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: bold;
             border: 1px solid var(--accent-gold);
             border-radius: 3px;
@@ -149,27 +149,30 @@
             box-shadow: var(--glow);
         }
 
-        /* BOTÓN DE SPONSOR (NUEVO) */
-        .sponsor-button {
-            display: inline-block;
-            width: 280px;
-            padding: 1rem;
-            text-align: center;
+        /* BOTÓN MERCADOPAGO */
+        .btn-mp {
             background-color: transparent;
-            color: var(--accent-green);
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: bold;
-            border: 1px dashed var(--accent-green);
-            border-radius: 3px;
-            transition: all 0.3s ease;
-            cursor: pointer;
+            color: var(--accent-mp);
+            border: 1px dashed var(--accent-mp);
         }
-        .sponsor-button:hover {
-            background-color: var(--accent-green);
-            color: #050505;
-            box-shadow: var(--glow-green);
-            border: 1px solid var(--accent-green);
+        .btn-mp:hover {
+            background-color: var(--accent-mp);
+            color: #fff;
+            box-shadow: var(--glow-mp);
+            border: 1px solid var(--accent-mp);
+        }
+
+        /* BOTÓN INTERNACIONAL */
+        .btn-intl {
+            background-color: transparent;
+            color: var(--accent-bmc);
+            border: 1px dashed var(--accent-bmc);
+        }
+        .btn-intl:hover {
+            background-color: var(--accent-bmc);
+            color: #fff;
+            box-shadow: var(--glow-bmc);
+            border: 1px solid var(--accent-bmc);
         }
 
         footer {
@@ -231,7 +234,7 @@
                         <p>Una red neuronal cruzando datos teológicos para encontrar patrones invisibles.</p>
                     </div>
                     <div class="feature-card">
-                        <h4 style="color: var(--accent-gold); margin-top: 0;">Existencialismo Crítico</h4>
+                        <h4 style="color: var(--accent-gold); margin-top: 0;">Existencialismo Gnóstico Crítico</h4>
                         <p>Las anotaciones filosóficas de Juan Arbelo. La lógica y la "Tenacidad del Buscador" —forjada a lo largo de una vida explorando múltiples religiones y disciplinas— aplicadas a la hermenéutica pura.</p>
                     </div>
                 </div>
@@ -242,7 +245,11 @@
                 
                 <div class="button-container">
                     <a href="mailto:juanarbeloaguilar@gmail.com" class="cta-button">SOLICITAR ACCESO AL CÓDICE</a>
-<a href="link.mercadopago.com.uy/rtforyou" class="sponsor-button" target="_blank">APOYAR EL PROYECTO (SPONSORS)</a>                </div>
+                    
+                    <a href="PEGA_AQUI_TU_LINK_MERCADOPAGO" class="cta-button btn-mp" target="_blank">APOYO LOCAL (MERCADOPAGO)</a>
+                    
+                    <a href="PEGA_AQUI_TU_LINK_INTERNACIONAL" class="cta-button btn-intl" target="_blank">APOYO INTERNACIONAL</a>
+                </div>
             </div>
 
             <div class="section-box">
