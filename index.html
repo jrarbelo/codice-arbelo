@@ -13,9 +13,9 @@
             --text-main: #e0e0e0;
             --accent-gold: #d4af37;
             --accent-purple: #4c1130;
-            --accent-mp: #009ee3; /* Azul MercadoPago */
-            --accent-pp: #0079C1; /* Azul PayPal */
-            --accent-bmc: #ff813f; /* Naranja Buy Me a Coffee */
+            --accent-mp: #009ee3; 
+            --accent-pp: #0079C1; 
+            --accent-bmc: #ff813f; 
             --glow: 0 0 10px #d4af37, 0 0 20px #4c1130;
             --glow-mp: 0 0 10px #009ee3;
             --glow-pp: 0 0 10px #0079C1;
@@ -109,7 +109,6 @@
             color: var(--accent-gold);
         }
 
-        /* ESTILOS PARA LA RESEÑA EVOLUTIVA */
         .lore-box {
             background: rgba(212, 175, 55, 0.05);
             border: 1px dashed var(--accent-gold);
@@ -135,8 +134,44 @@
             border-left: 3px solid var(--accent-gold);
             padding: 1rem;
         }
+
+        /* ESTILOS PARA LA TERMINAL DE MUESTRA (SNEAK PEEK) */
+        details {
+            background: #0a0a0a;
+            border: 1px solid #333;
+            margin-bottom: 1rem;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        summary {
+            background: rgba(76, 17, 48, 0.4);
+            color: var(--accent-gold);
+            padding: 1rem;
+            cursor: pointer;
+            font-weight: bold;
+            outline: none;
+            transition: background 0.3s ease;
+        }
+        summary:hover {
+            background: rgba(76, 17, 48, 0.8);
+        }
+        .decrypted-content {
+            padding: 1.5rem;
+            border-top: 1px dashed #333;
+            font-size: 0.95rem;
+            color: #ccc;
+        }
+        .decrypted-content .verse {
+            color: #fff;
+            font-style: italic;
+            margin-bottom: 1rem;
+            border-left: 2px solid var(--accent-gold);
+            padding-left: 10px;
+        }
+        .decrypted-content strong {
+            color: var(--accent-gold);
+        }
         
-        /* CONTENEDOR DE BOTONES MONETIZACIÓN */
         .button-container {
             display: flex;
             flex-wrap: wrap;
@@ -166,44 +201,12 @@
             box-shadow: var(--glow);
         }
 
-        /* BOTÓN MERCADOPAGO */
-        .btn-mp {
-            background-color: transparent;
-            color: var(--accent-mp);
-            border: 1px dashed var(--accent-mp);
-        }
-        .btn-mp:hover {
-            background-color: var(--accent-mp);
-            color: #fff;
-            box-shadow: var(--glow-mp);
-            border: 1px solid var(--accent-mp);
-        }
-
-        /* BOTÓN PAYPAL */
-        .btn-pp {
-            background-color: transparent;
-            color: var(--accent-pp);
-            border: 1px dashed var(--accent-pp);
-        }
-        .btn-pp:hover {
-            background-color: var(--accent-pp);
-            color: #fff;
-            box-shadow: var(--glow-pp);
-            border: 1px solid var(--accent-pp);
-        }
-
-        /* BOTÓN BUY ME A COFFEE */
-        .btn-bmc {
-            background-color: transparent;
-            color: var(--accent-bmc);
-            border: 1px dashed var(--accent-bmc);
-        }
-        .btn-bmc:hover {
-            background-color: var(--accent-bmc);
-            color: #fff;
-            box-shadow: var(--glow-bmc);
-            border: 1px solid var(--accent-bmc);
-        }
+        .btn-mp { background-color: transparent; color: var(--accent-mp); border: 1px dashed var(--accent-mp); }
+        .btn-mp:hover { background-color: var(--accent-mp); color: #fff; box-shadow: var(--glow-mp); border: 1px solid var(--accent-mp); }
+        .btn-pp { background-color: transparent; color: var(--accent-pp); border: 1px dashed var(--accent-pp); }
+        .btn-pp:hover { background-color: var(--accent-pp); color: #fff; box-shadow: var(--glow-pp); border: 1px solid var(--accent-pp); }
+        .btn-bmc { background-color: transparent; color: var(--accent-bmc); border: 1px dashed var(--accent-bmc); }
+        .btn-bmc:hover { background-color: var(--accent-bmc); color: #fff; box-shadow: var(--glow-bmc); border: 1px solid var(--accent-bmc); }
 
         footer {
             text-align: center;
@@ -249,6 +252,32 @@
             </div>
 
             <div class="section-box">
+                <h3 class="section-title">> ARCHIVOS DESENCRIPTADOS (SNEAK PEEK)</h3>
+                <p>La base de datos completa contiene el análisis exhaustivo de cada bloque de código bíblico. Haz clic en las siguientes terminales para observar la ingeniería inversa en acción extraída del Motor SQL:</p>
+                
+                <details>
+                    <summary>[+] ACCEDER AL ARCHIVO 001: El Protocolo del Exilio (Génesis 3:22)</summary>
+                    <div class="decrypted-content">
+                        <div class="verse">"Y dijo Jehová Dios: He aquí el hombre es como uno de nosotros, sabiendo el bien y el mal; ahora, pues, que no alargue su mano, y tome también del árbol de la vida, y coma, y viva para siempre." (RVR1960)</div>
+                        <p><strong>Código Hebreo:</strong> כְּאַחַד מִמֶּנּוּ (Ke'akhad mimmennu - Como uno de nosotros). עֵץ הַחַיִּים ('Ets hajayyim - Árbol de la vida).</p>
+                        <p><strong>Análisis Ortodoxo:</strong> La expulsión no es solo castigo, es Misericordia Extrema. Si Adán comía del Árbol de la Vida en estado pecaminoso, la humanidad habría quedado inmortalizada en su maldad, sin posibilidad de redención.</p>
+                        <p><strong>El Glitch Gnóstico:</strong> El miedo del Demiurgo (Yaldabaoth). Entra en pánico al ver que el humano, iluminado por la Gnosis, es superior a él. Lo expulsa rápidamente para que no consuma el último secreto de la inmortalidad y derroque su imperio de esclavitud material.</p>
+                        <p><strong>Análisis Algorítmico (IA):</strong> Evaluación de Riesgo Crítico (Vulnerability_Assessment). El Kernel detecta que si el usuario corrupto accede al Directorio de Sistema 'Tree_of_Life', generaría un 'Infinite_Loop' inborrable. Se emite un comando inmediato de 'Kick_User' y 'Revoke_Access'.</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>[+] ACCEDER AL ARCHIVO 002: El Origen de la Dualidad (Génesis 1:1)</summary>
+                    <div class="decrypted-content">
+                        <div class="verse">"En el principio creó Dios los cielos y la tierra." (RVR1960)</div>
+                        <p><strong>Código Hebreo:</strong> בְּרֵאשִׁית בָּרָא אֱלֹהִים (Bereshit bara Elohim).</p>
+                        <p><strong>El Glitch Plural:</strong> La palabra "Elohim" (אֱלֹהִים) es gramaticalmente plural ("Dioses"), pero el verbo "Bara" (Creó) es singular. La ortodoxia asume esto como el misterio de la Trinidad desde el código base, o un plural de majestad.</p>
+                        <p><strong>Filtro Existencialista Crítico:</strong> El texto evidencia una asimilación de fuentes antiguas. Los Arcontes o la asamblea cósmica actuando como una sola entidad constructora del plano material. El código de la Matrix no fue programado por un individuo solitario, sino por una arquitectura de inteligencias operando en red.</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="section-box">
                 <h3 class="section-title">> ARQUITECTURA DE LA MATRIX</h3>
                 <div class="grid-features">
                     <div class="feature-card">
@@ -283,9 +312,7 @@
                     <a href="mailto:juanarbeloaguilar@gmail.com" class="cta-button">SOLICITAR ACCESO AL CÓDICE</a>
                     
                     <a href="PEGA_AQUI_TU_LINK_MERCADOPAGO" class="cta-button btn-mp" target="_blank">APOYO LOCAL (MERCADOPAGO)</a>
-                    
                     <a href="PEGA_AQUI_TU_LINK_PAYPAL" class="cta-button btn-pp" target="_blank">APOYO INTL (PAYPAL)</a>
-                    
                     <a href="PEGA_AQUI_TU_LINK_COFFEE" class="cta-button btn-bmc" target="_blank">APOYO INTL (COFFEE)</a>
                 </div>
             </div>
